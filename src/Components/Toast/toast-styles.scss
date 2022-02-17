@@ -1,0 +1,76 @@
+@import 'global.scss';
+
+.toast-wrapper {
+  .Toastify {
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: rgba($background-color, 1);
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 9999;
+      background: rgba($background-color, 0.7);
+      opacity: 1;
+      visibility: visible;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    // &.closing {
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   z-index: 9999;
+    //   background-color: rgba(0, 0, 0, 0);
+    // }
+    .Toastify__toast-container {
+      .Toastify__toast {
+        &--error {
+          background-color: $gray-card-color;
+        }
+        &--success {
+          background-color: $gray-card-color;
+        }
+        &-body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .Toastify__toast-container--top-center {
+      top: auto;
+      width: auto;
+      max-width: 500px;
+      min-width: 320px;
+      margin: auto 15px;
+      padding: 40px 0;
+      position: static;
+      transform: none;
+    }
+  }
+  .Toastify__progress-bar {
+    background-color: $red;
+  }
+}
+
+.Toastify__toast--error {
+  background-color: $gray-card-color;
+}
+
+.Toastify__toast {
+  margin-bottom: 0;
+}

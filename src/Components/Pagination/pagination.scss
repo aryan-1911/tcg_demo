@@ -1,0 +1,71 @@
+@import 'global.scss';
+
+.pagination {
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -10px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 5px;
+      outline: none;
+      &.active {
+        a {
+          color: $white;
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    a {
+      outline: none;
+      padding: 0;
+      background: none;
+      padding: 5px;
+      color: $gray-text-color;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      cursor: pointer;
+      &:before {
+        @include before-img(4px, 4px);
+        bottom: 0;
+        left: 0;
+        border-radius: 50%;
+        background: $red;
+        left: calc(50% - 1px);
+        opacity: 0;
+      }
+      span {
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+  }
+
+  &__btn {
+    .btn {
+      outline: none;
+      padding: 0;
+      background: none;
+      padding: 5px;
+      color: $gray-text-color;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      cursor: pointer;
+      span {
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+  }
+}

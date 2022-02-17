@@ -1,0 +1,21 @@
+@import 'global.scss';
+
+.secondary-modal {
+  .universal-modal {
+    &__content {
+      padding: 40px;
+      background: $gray-card-color;
+    }
+  }
+}
+
+.secondary-modal-won {
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 0 15px;
+    color: $gray-text-color;
+    display: block;
+    text-transform: uppercase;
+  }
+}

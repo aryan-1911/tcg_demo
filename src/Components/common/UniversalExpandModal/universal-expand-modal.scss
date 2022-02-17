@@ -1,0 +1,50 @@
+@import 'global.scss';
+
+.universal-expand-modal {
+  .universal-modal {
+    &__header {
+      &-close {
+        .btn {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.universal-expand-modal--collapse {
+  position: fixed !important;
+  inset: auto !important;
+  top: auto !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: 0 !important;
+  padding: 0;
+  // max-width: 400px;
+  max-width: unset;
+  width: auto;
+  & > div:first-child {
+    position: static !important;
+  }
+  .universal-modal {
+    &__header {
+      cursor: pointer;
+      background: $gray-card-color;
+      // border-left: 5px solid $red;
+      border: 2px solid $red;
+      border-radius: 8px;
+      padding: 10px;
+      background: #f36c48;
+    }
+
+    &__title {
+      color: $red;
+    }
+
+    &__content {
+      display: none;
+    }
+  }
+}

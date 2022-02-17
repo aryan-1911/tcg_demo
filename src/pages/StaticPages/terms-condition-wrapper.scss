@@ -1,0 +1,255 @@
+@import 'global.scss';
+
+.static-page {
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: $background-color;
+    margin: 0 0 15px;
+  }
+  h2 {
+    font-weight: 700;
+    color: $background-color;
+    font-size: 22px;
+    margin: 35px 0 20px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 22px;
+    margin-top: 5px;
+  }
+  a {
+  }
+  ul {
+    list-style: none;
+    padding: 0 35px;
+    li {
+      margin: 10px 0;
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 22px;
+      &::before {
+        content: '';
+        background: $red;
+        left: 0;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.terms_condition-wrapper {
+  background-color: $white;
+  color: $background-color;
+  width: 100%;
+  min-height: 100vh;
+
+  .terms_condition-logo {
+    cursor: pointer;
+  }
+  @include b(tablet) {
+    padding: 40px 30px;
+
+    .terms_condition-aside {
+      width: 300px;
+      top: 0;
+      left: 0px;
+      bottom: 0;
+      background: $white;
+      padding: 40px 0 40px 20px;
+      z-index: 10;
+      &__burger {
+        display: block;
+      }
+    }
+    .terms_condition-content {
+      width: calc(100% - 300px);
+    }
+  }
+  @include b(mobile) {
+    padding: 30px 15px;
+  }
+}
+
+.terms_condition-content {
+  padding-top: 94px;
+}
+
+.terms_condition {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1320px;
+
+  @include m(tablet) {
+    padding: 0 20px;
+  }
+}
+
+.terms_condition-aside {
+  padding-top: 40px;
+  top: 0;
+  bottom: 0;
+}
+
+.terms-aside-wrapper {
+  margin-top: 30px;
+  padding-right: 15px;
+
+  .terms-aside-nav {
+    .terms-aside-list {
+      list-style: none;
+      padding: 0 0;
+
+      li {
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 30px;
+
+        a {
+          color: $background-color;
+          font-size: 22px;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
+        .sub-menu {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+
+          a {
+            cursor: pointer;
+            display: flex;
+            margin: 5px 0;
+            font-size: 14px;
+            font-weight: 400;
+            padding-left: 16px;
+            position: relative;
+            color: $gray-text-color;
+            transition: 0.3s color;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 4px;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              border: 1px solid $gray-text-color;
+              background-color: transparent;
+              transition: 0.3s border-color, 0.3s background-color;
+            }
+
+            &.active {
+              color: currentColor;
+
+              &::before {
+                border-color: $red;
+                background-color: $red;
+              }
+            }
+
+            span {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+      .is-active {
+        a {
+          &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 40px;
+            top: -10px;
+            left: 0;
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.terms-of-service-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .terms-of-service-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .terms-section {
+    margin-top: 35px;
+
+    .terms-section-list {
+      list-style: none;
+      padding: 0 35px;
+
+      li {
+        margin: 5px;
+        display: flex;
+        flex-wrap: nowrap;
+
+        &::before {
+          content: '\2022';
+          color: $red;
+          font-weight: bold;
+          display: inline-block;
+          font-size: 42px;
+          margin: 5px 10px 0 0;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    color: $background-color;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .text {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 22px;
+    margin-top: 5px;
+  }
+}
+
+
+.terms_condition-wrapper p, .terms_condition-wrapper ul li,.terms_condition-wrapper span {
+  line-height: 27px;
+}
+
+.terms_condition-wrapper ul > li {
+  margin-bottom: 20px;
+}

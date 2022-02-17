@@ -1,0 +1,59 @@
+@import 'global.scss';
+.faq-page {
+  &-wrapper {
+    .title {
+      display: block;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .faqs-list {
+      margin: 25px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: $gray-text-color;
+        transition: 0.3s color;
+
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &-block {
+    display: flex;
+    flex-direction: row;
+    .inner-padding {
+      padding: 30px;
+    }
+
+    .adaptive-aside__box {
+      padding-left: 20px;
+    }
+  }
+}
+
+.faqs-title {
+  font-size: 22px;
+  font-weight: bold;
+}

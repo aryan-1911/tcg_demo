@@ -1,0 +1,12 @@
+@import 'global.scss';
+
+.CookieConsent {
+  display: block;
+  a {
+    color: $white;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

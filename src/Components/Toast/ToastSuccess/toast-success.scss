@@ -1,0 +1,34 @@
+@import 'global.scss';
+
+.toast-success-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+
+  .icon-success_modal {
+    color: $green;
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+
+  .btn-wrapper {
+    display: table;
+  }
+}
+
+.toast-success {
+  &__title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align:center;
+  }
+  &__subtitle {
+    display: block;
+    margin: 0 0 30px;
+    font-size: 22px;
+    text-align: center;
+  }
+}

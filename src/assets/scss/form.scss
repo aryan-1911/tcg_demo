@@ -1,0 +1,483 @@
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.radio-button-block {
+  display: flex;
+  align-items: center;
+  .MuiRadio-root {
+    color: $white;
+  }
+  .MuiRadio-colorSecondary.Mui-checked {
+    color: $red;
+  }
+
+  .radio-button-image-block {
+    width: 27px;
+    height: 18px;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+}
+
+.input-box {
+  width: 100%;
+
+  .MuiFormControl-root {
+    display: block;
+  }
+
+  .MuiFormLabel-root {
+    @extend %input-label;
+    position: static;
+    transform: none;
+    &.Mui-focused {
+      color: $red;
+    }
+    &.Mui-disabled {
+      color: $red;
+    }
+  }
+
+  .MuiInputBase-input {
+    @extend %input;
+    border: 1px solid $white;
+  }
+
+  .MuiInputBase-root {
+    display: block;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.password-input {
+  position: relative;
+  display: flex !important;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+
+  .MuiFormControl-root {
+    display: block;
+  }
+
+  .MuiInputBase-input {
+    @extend %input;
+    padding-right: 0 !important;
+  }
+
+  .MuiInputBase-root {
+    display: flex;
+    border: 1px solid $white;
+    color: $white;
+    border-radius: 12px;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  .MuiSvgIcon-root {
+    fill: $gray-text-color;
+  }
+
+  .password-tooltip-box {
+    position: absolute;
+    right: -370px;
+    top: -90px;
+    width: 340px;
+    height: 192px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: $gray-card-color;
+    padding: 20px;
+
+    .icon-RedX {
+      color: $red;
+    }
+
+    .icon-check_sign {
+      color: $green;
+    }
+
+    @media screen and (max-width: 1275px) {
+      right: 20%;
+      top: -200px;
+    }
+
+    &__triangle {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      bottom: 35px;
+      left: -10px;
+      background-color: $gray-card-color;
+      transform: rotate(45deg);
+
+      @media screen and (max-width: 1275px) {
+        left: 45%;
+        bottom: -8px;
+      }
+    }
+
+    &__heading {
+      font-size: 14px;
+      font-weight: 700;
+      color: $white;
+      margin-left: 20px;
+    }
+
+    &-validation {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-size: 12px;
+      font-weight: 400;
+
+      &__text {
+        margin-left: 10px;
+      }
+    }
+    .error {
+      color: $red;
+    }
+  }
+
+  .top-position {
+    right: 20%;
+    top: -200px;
+
+    .password-tooltip-box__triangle {
+      left: 45%;
+      bottom: -8px;
+    }
+  }
+
+  .forgot-password-text {
+    color: $gray-text-color;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+
+.phone-number-box {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+    position: relative;
+  }
+
+  .form-control {
+    background: transparent;
+    border: 1px solid $white;
+    border-radius: 12px;
+    color: $white;
+    height: 48px;
+  }
+
+  .flag-dropdown {
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+  }
+
+  .react-tel-input {
+    .form-control {
+      width: 100%;
+      padding-left: 60px;
+    }
+
+    .selected-flag {
+      padding: 0 40px 0 15px;
+
+      @include m(400) {
+        padding-left: 20px;
+      }
+
+      &:hover {
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+
+      &:focus {
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+
+      .arrow {
+        position: absolute;
+        left: 25px;
+        width: 5px;
+        height: 5px;
+        color: $white;
+        border: 1px solid currentColor;
+        border-width: 0 0 1px 1px;
+        transform: rotate(-45deg);
+        margin-top: -4px;
+      }
+    }
+
+    .flag-dropdown.open {
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      .selected-flag {
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .country-list {
+      border-top: 2px solid $red;
+      background-color: $background-color;
+
+      li {
+        &:hover {
+          background-color: $black;
+        }
+        &:active {
+          border: none;
+          outline: none;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+
+      .country.highlight {
+        background-color: $black;
+      }
+    }
+  }
+
+  @include b(550) {
+    &__input {
+      flex-direction: column;
+    }
+    .input-box {
+      padding: 15px 0 25px;
+    }
+  }
+}
+
+.checkbox-input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 14px;
+  }
+  &--error {
+    .MuiIconButton-label {
+    }
+  }
+
+  .input-label {
+    margin-bottom: 1rem;
+  }
+}
+
+.text-area-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 25px;
+
+  &__input {
+    border: 1px solid $white;
+    color: $white;
+    font-size: 13px;
+    border-radius: 12px;
+    background-color: transparent;
+    resize: none;
+    padding: 16px 15px;
+    min-height: 120px;
+
+    @include m(400) {
+      padding: 16px 20px;
+      font-size: 14px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $white !important;
+      opacity: 0.4;
+    }
+
+    &:-moz-placeholder {
+      color: $white !important;
+      opacity: 0.4;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white !important;
+      opacity: 0.4;
+    }
+  }
+
+  .input-label {
+    margin-bottom: 1rem;
+  }
+}
+
+.form-slider-box {
+  .MuiSlider-root {
+    color: $white !important;
+    width: 140px;
+  }
+  .MuiSlider-valueLabel {
+    display: none !important;
+  }
+  .MuiSlider-thumb {
+    border: 3px solid $white !important;
+    background-color: $red !important;
+  }
+  .MuiSlider-mark {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  .MuiSlider-thumb.Mui-focusVisible,
+  .MuiSlider-thumb:hover {
+    box-shadow: none !important;
+  }
+  .MuiSlider-markLabel,
+  .MuiSlider-markLabelActive {
+    color: $white !important;
+  }
+}
+
+.input-label {
+  @extend %input-label;
+}
+
+.modal-block {
+  .modal-header {
+    border: 2px solid red;
+  }
+}
+
+.payment-card-block {
+  .input-box {
+    width: 100%;
+  }
+  .payment-card-security-inputs {
+    @include m(500) {
+      display: flex;
+      align-items: center;
+    }
+
+    .input-box {
+      margin: 25px 0;
+
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.MuiAccordionSummary-content {
+  margin: 0 0 !important;
+}
+
+.MuiPaper-root {
+  background-color: transparent !important;
+  border: 1px solid $white;
+  border-radius: 12px !important;
+  color: $white !important;
+}
+
+.MuiAccordionDetails-root {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-error {
+  color: $alert-red;
+  font-size: 12px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  padding: 0 5px;
+  background-color: $gray-card-color;
+  text-align: right;
+  border-radius: 5px;
+
+  .without-label & {
+    top: -7px;
+  }
+
+  .login-page-form & {
+    background-color: $background-color;
+  }
+}
+
+.error-field {
+  .MuiInputBase-input,
+  .text-area-box__input,
+  .MuiInput-underline,
+  .payment-method__box {
+    border-color: $alert-red;
+  }
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.modal-wrapper {
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &:active {
+    outline: none;
+    border: none;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+}
+
+.red-dollar {
+  display: block;
+  color:$dollarGreen;
+  font-size: 20px;
+  font-weight: 700;
+}

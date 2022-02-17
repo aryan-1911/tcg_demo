@@ -1,0 +1,69 @@
+@import 'global.scss';
+
+.disclaimer {
+  position: fixed;
+  padding: 10px 25px;
+  background: $red;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  z-index: 13;
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__info {
+    width: 100px;
+  }
+
+  &__text {
+    width: calc(100% - 25px - 38px);
+    padding: 0 25px;
+    text-align: center;
+
+    @include m(551) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__close {
+    display: block;
+    .btn {
+      padding: 10px;
+      .MuiIcon-root {
+        margin: 0;
+      }
+    }
+  }
+
+  &__resend {
+    margin: 0 0 0 15px;
+
+    @include b(550) {
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 11px 15px 10px;
+      font-size: 15px;
+    }
+  }
+
+  @include b(550) {
+    padding: 10px 15px;
+    &__text {
+      padding: 0 15px;
+    }
+  }
+}

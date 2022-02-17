@@ -1,0 +1,49 @@
+@import 'global.scss';
+
+.radio-switch {
+  display: block;
+  .input-label {
+    margin-bottom: 16px;
+    display: table;
+  }
+  .MuiFormGroup-root {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid $white;
+    border-radius: 12px;
+  }
+  .MuiFormControlLabel-root {
+    margin: 0;
+    padding: 16px 15px;
+    text-align: center;
+    width: 25%;
+    transition: all 0.3s;
+    &.is-selected {
+      transition: all 0.3s;
+      background-color: rgba($white, 0.15);
+    }
+    border-right: 1px solid $white;
+    &:last-child {
+      border: 0;
+    }
+    @include b(mobile) {
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 50%;
+    }
+  }
+
+  @include b(mobile){
+    .MuiFormControlLabel-root:nth-child(1),.MuiFormControlLabel-root:nth-child(2){
+      border-bottom: 1px solid #fff;
+    }
+  }
+  .MuiRadio-root {
+    display: none;
+  }
+  .MuiTypography-body1 {
+    font: 700 14px $font;
+    display: block;
+    width: 100%;
+  }
+}

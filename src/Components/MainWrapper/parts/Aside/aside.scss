@@ -1,0 +1,372 @@
+@import 'global.scss';
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: $aside-width;
+  border-right: 1px solid $gray-card-color;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  transition: all 0.3s;
+  z-index: 2;
+
+  &__box {
+    height: 100%;
+  }
+
+  &__cont {
+    @extend %scroll-wrap;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .general-info-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+
+    .general-info-links {
+      padding: 0 0;
+      list-style: none;
+
+      li {
+        padding: 10px 0;
+        &::marker {
+          display: none;
+        }
+        &.is-active {
+          a {
+            color: $white;
+          }
+        }
+      }
+      .menu-link {
+        font-size: 16px;
+      }
+    }
+
+    .general-info-link {
+      margin: 10px 0;
+      color: $gray-text-color;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+
+  &__burger {
+    display: none;
+    margin-right: 15px;
+    transition: 0.3s margin-right;
+
+    .btn {
+      background: none;
+      padding: 0;
+      width: auto;
+
+      .MuiIcon-root {
+        font-size: 28px;
+        margin: 0;
+        display: block;
+      }
+    }
+  }
+}
+
+.aside-container {
+  @extend %scroll-wrap;
+  padding-left: 40px;
+}
+
+.aside-header {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: $background-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(#{$aside-width} - 1px);
+  height: $aside-header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  transition: 0.3s width;
+}
+
+.aside-logo {
+  img {
+    max-width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav {
+  padding: #{$aside-header-height} 0 30px;
+  margin: auto 0;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 28px 0;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 40px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+      }
+
+      &.is-active {
+        &:before {
+          background-color: $red;
+        }
+        .menu-link {
+          color: $white;
+        }
+        .material-icons {
+          color: $white;
+          &:before {
+            filter: invert(0);
+          }
+          &.icon-pods:before {
+            filter: invert(1);
+          }
+          &.icon-tournaments:before {
+            filter: invert(1);
+          }
+          &.icon-leaderboard:before {
+            filter: invert(1);
+          }
+          &.icon-chat-room:before {
+            filter: invert(1);
+          }
+        }
+      }
+    }
+
+    .menu-link {
+      display: table;
+      position: relative;
+      padding-left: 60px;
+      font-size: 18px;
+      &:hover {
+        .material-icons {
+          &:before {
+            filter: invert(0);
+          }
+          &.icon-pods:before {
+            filter: invert(1);
+          }
+          &.icon-tournaments:before {
+            filter: invert(1);
+          }
+          &.icon-leaderboard:before {
+            filter: invert(1);
+          }
+          &.icon-chat-room:before {
+            filter: invert(1);
+          }
+        }
+      }
+    }
+
+    .material-icons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: inherit;
+      font-size: 32px;
+    }
+  }
+}
+
+.menu-link {
+  color: $gray-text-color;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $white;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+}
+
+@include b(tablet) {
+  .aside {
+    &__box {
+      overflow: auto;
+    }
+
+    &__cont {
+      overflow-x: hidden;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+
+  body {
+    &.nav-close {
+      overflow-x: hidden;
+
+      .aside {
+        width: $mobile-aside-width;
+        overflow: visible;
+        padding-left: 20px;
+
+        &-logo {
+          opacity: 0;
+          visibility: hidden;
+          width: 0;
+        }
+
+        &__burger {
+          margin-right: 29px;
+        }
+      }
+
+      .aside-container {
+        padding-left: 15px;
+      }
+
+      .aside-header {
+        width: calc(#{$mobile-aside-width} - 1px);
+        transition: 0.3s width;
+      }
+
+      .nav {
+        &__list {
+          span {
+            &:not(.material-icons) {
+              opacity: 0;
+              visibility: hidden;
+              white-space: nowrap;
+            }
+          }
+          li {
+            width: 49px;
+          }
+        }
+      }
+
+      .aside-footer {
+        visibility: hidden;
+      }
+
+      .main-content {
+        width: calc(100% - #{$mobile-aside-width});
+        margin-left: $mobile-aside-width;
+
+        &:before {
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s;
+        }
+      }
+      .main-wrapper {
+        overflow: visible;
+      }
+    }
+  }
+  .main-content {
+    width: calc(100% - #{$mobile-aside-width});
+    min-width: calc(100% - #{$mobile-aside-width});
+    margin-left: $aside-width;
+    transition: all 0.3s;
+    position: relative;
+
+    &:before {
+      @include before-img(100%, 100%);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba($background-color, 0.7);
+      opacity: 1;
+      overflow: visible;
+      z-index: 12;
+      transition: all 0.3s;
+    }
+  }
+
+  .main-wrapper {
+    overflow: hidden;
+  }
+}
+
+.copyright {
+  font-size: 11px;
+  color: $gray-text-color;
+  padding-bottom: 30px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.aside-blog-footer {
+  padding-left: 60px;
+  .general-info-links {
+    list-style: none;
+    padding: 10px 5px 10px 0;
+    li {
+      position: relative;
+      font-size: 18px;
+      padding: 20px 0;
+      a {
+        text-decoration: none;
+        color: #79797f;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 760px) and (max-width: 1000px) {
+  .nav-close {
+    .aside__cont {
+      justify-content: flex-start;
+    }
+
+    .nav {
+      margin: 0;
+    }
+
+    .aside-footer {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .aside {
+    &__cont {
+      height: auto;
+      .nav {
+        margin-top: 25px;
+      }
+    }
+  }
+}

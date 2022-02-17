@@ -1,0 +1,51 @@
+@import 'global.scss';
+.sort-drop-down {
+  position: relative;
+  &__box {
+    position: absolute !important;
+    width: fit-content;
+    color: $white;
+    top: 100% !important;
+    margin-top: 10px;
+    z-index: 10;
+    background: $background-color;
+    overflow: hidden;
+  }
+  &__element-active {
+    background-color: $black !important;
+    font-weight: 700 !important;
+  }
+
+  .MuiPaper-root {
+    color: $white;
+    overflow: hidden;
+  }
+
+  .MuiList-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .MuiMenuItem-root {
+    &:hover {
+      background-color: $black;
+    }
+  }
+
+  &__btn {
+    &-text {
+      margin-right: 8px;
+    }
+
+    &-val {
+      color: $white;
+      span {
+        font-size: 10px;
+        transform: rotate(-90deg);
+        display: inline-block;
+        margin-left: 9px;
+        color: $gray-text-color;
+      }
+    }
+  }
+}

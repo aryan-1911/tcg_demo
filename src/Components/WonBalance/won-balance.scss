@@ -1,0 +1,53 @@
+@import 'global.scss';
+
+.won-balance {
+  padding: 40px 20px;
+  background: $gray-card-color;
+  &__ico {
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    .icon-ic_cup {
+      color: $gray-text-color;
+    }
+    .MuiIcon-root {
+      font-size: 100px;
+    }
+  }
+  &__price {
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    color: $white;
+    font-weight: 700;
+    padding-bottom: 20px;
+    span {
+      color:$dollarGreen;
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $gray-text-color;
+    font-weight: 700;
+  }
+  @include b(tablet) {
+    padding: 30px 25px 25px;
+    &__ico {
+      padding-bottom: 20px;
+      .MuiIcon-root {
+        font-size: 60px;
+      }
+    }
+    &__price {
+      font-size: 40px;
+      span {
+        font-size: 26px;
+      }
+    }
+  }
+}

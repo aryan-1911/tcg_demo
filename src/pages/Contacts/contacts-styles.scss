@@ -1,0 +1,47 @@
+@import 'global.scss';
+
+.contacts-page-wrapper {
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+
+.contacts-page {
+  .email-descr {
+    color: $gray-text-color;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.contact-message-sent-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px 60px;
+
+  .icon-success_modal {
+    font-size: 62px;
+    color: $green;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 22px;
+    padding-bottom: 11px;
+  }
+
+  &__sub-title {
+    font-size: 14px;
+    padding-bottom: 60px;
+  }
+
+  &.card-form {
+    .btn-wrapper {
+      max-width: 220px;
+      margin-left: 0;
+    }
+  }
+}

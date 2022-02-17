@@ -1,0 +1,47 @@
+@import 'global.scss';
+
+.match-edit-form {
+  &__row {
+    padding-bottom: 30px;
+    margin: 0 -10px;
+    display: flex;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &__col {
+    padding: 0 10px;
+  }
+
+  .MuiFormGroup-root {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.match-edit-form-entry {
+  .MuiFormLabel-root {
+    margin-bottom: 16px;
+  }
+
+  .MuiFormControlLabel-root {
+    margin: 0 40px 20px 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1;
+    font-family: $font;
+  }
+  &__price {
+    display: block;
+    font-weight: 700;
+    color: $white;
+    span{
+      color:$white;
+    }
+    &-total {
+      color: $gray-text-color;
+    }
+  }
+}

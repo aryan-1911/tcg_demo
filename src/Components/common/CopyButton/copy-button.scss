@@ -1,0 +1,48 @@
+@import 'global.scss';
+
+.copy-button {
+  position: relative;
+  &__icon {
+    &.MuiIcon-root {
+      font-size: 16px;
+      font-weight: 400;
+      color: $gray-text-color;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        opacity: 0.8;
+        transition: all 0.3s;
+      }
+    }
+  }
+  &__tooltip {
+    position: absolute;
+    bottom: 100%;
+    background: $background-color;
+    color: $white;
+    box-shadow: 2px 2px 6px -3px rgba($white, 0.8);
+    border-radius: 3px;
+    padding: 5px 7px 4px;
+    z-index: 2;
+    left: 0;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s;
+    }
+  }
+
+  &__textarea {
+    overflow: hidden;
+    opacity: 0;
+    z-index: -99;
+    position: absolute;
+  }
+}

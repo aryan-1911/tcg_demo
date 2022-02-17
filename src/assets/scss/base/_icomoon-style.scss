@@ -1,0 +1,362 @@
+@import 'icomoon-variables';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?p8lhv')
+      format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?p8lhv')
+      format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?p8lhv##{$icomoon-font-family}')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ic_document {
+  &:before {
+    content: $icon-ic_document;
+  }
+}
+.icon-message-letter {
+  &:before {
+    content: $icon-message-letter;
+  }
+}
+.icon-report-user {
+  &:before {
+    content: $icon-report-user;
+  }
+}
+.icon-ready-label {
+  &:before {
+    content: $icon-ready-label;
+  }
+}
+.icon-expand {
+  &:before {
+    content: $icon-expand;
+  }
+}
+.icon-collapse {
+  &:before {
+    content: $icon-collapse;
+  }
+}
+.icon-message-voice {
+  &:before {
+    content: $icon-message-voice;
+  }
+}
+.icon-waiting-label {
+  &:before {
+    content: $icon-waiting-label;
+  }
+}
+.icon-warning-alert1 {
+  &:before {
+    content: $icon-warning-alert1;
+  }
+}
+.icon-copy {
+  &:before {
+    content: $icon-copy;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-success_modal {
+  &:before {
+    content: $icon-success_modal;
+  }
+}
+.icon-warning-alert {
+  &:before {
+    content: $icon-warning-alert;
+  }
+}
+.icon-calendar {
+  &:before {
+    content: $icon-calendar;
+  }
+}
+.icon-check_sign {
+  &:before {
+    content: $icon-check_sign;
+  }
+}
+.icon-deposit {
+  &:before {
+    content: $icon-deposit;
+  }
+}
+.icon-filter {
+  &:before {
+    content: $icon-filter;
+  }
+}
+.icon-sort {
+  &:before {
+    content: $icon-sort;
+  }
+}
+.icon-ic_alert {
+  &:before {
+    content: $icon-ic_alert;
+  }
+}
+.icon-plus {
+  &:before {
+    content: $icon-plus;
+  }
+}
+.icon-play{
+  &:before {
+    content: $icon-play;
+  }
+}
+.icon-arr_left {
+  &:before {
+    content: $icon-arr_left;
+  }
+}
+.icon-arr_right {
+  &:before {
+    content: $icon-arr_right;
+  }
+}
+.icon-arrows_left {
+  &:before {
+    content: $icon-arrows_left;
+  }
+}
+.icon-arrows_right {
+  &:before {
+    content: $icon-arrows_right;
+  }
+}
+.icon-atach {
+  &:before {
+    content: $icon-atach;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-trash {
+  &:before {
+    content: $icon-trash;
+  }
+}
+.icon-close1 {
+  &:before {
+    content: $icon-close1;
+  }
+}
+.icon-ic_credit_card {
+  &:before {
+    content: $icon-ic_credit_card;
+  }
+}
+.icon-ic_cup {
+  &:before {
+    content: $icon-ic_cup;
+  }
+}
+.icon-direction_arrow {
+  &:before {
+    content: $icon-direction_arrow;
+  }
+}
+.icon-dispute {
+  &:before {
+    content: $icon-dispute;
+  }
+}
+.icon-dollar_sign {
+  &:before {
+    content: $icon-dollar_sign;
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email;
+  }
+}
+.icon-ic_edit {
+  &:before {
+    content: $icon-ic_edit;
+  }
+}
+.icon-matches {
+  &:before {
+    content: $icon-matches;
+  }
+}
+.icon-messages {
+  &:before {
+    content: $icon-messages;
+  }
+}
+.icon-notification_bell {
+  &:before {
+    content: $icon-notification_bell;
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone;
+  }
+}
+.icon-plus_sign {
+  &:before {
+    content: $icon-plus_sign;
+  }
+}
+.icon-profile {
+  &:before {
+    content: $icon-profile;
+  }
+}
+.icon-chat-empty {
+  &:before {
+    content: $icon-chat-empty;
+  }
+}
+.icon-ic_more {
+  &:before {
+    content: $icon-ic_more;
+  }
+}
+.icon-RedX {
+  &:before {
+    content: $icon-RedX;
+  }
+}
+.icon-settings {
+  &:before {
+    content: $icon-settings;
+  }
+}
+.icon-menu {
+  &:before {
+    content: $icon-menu;
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up;
+  }
+}
+.icon-arr_down {
+  &:before {
+    content: $icon-arr_down;
+  }
+}
+.icon-refresh {
+  &:before {
+    content: $icon-refresh;
+  }
+}
+
+.icon-home {
+  &:before {
+    content: ' ';
+    display: block;
+    background-image: url('../../icons/home.svg');
+    background-size: 38px 35px;
+    height: 35px;
+    width: 40px;
+    position: relative;
+    right: 4px;
+    filter: invert(0.5);
+  }
+}
+
+.icon-pods {
+  &:before {
+    content: ' ';
+    display: block;
+    background-image: url('../../icons/pods.svg');
+    background-size: 65px 60px;
+    height: 60px;
+    width: 65px;
+    position: relative;
+    right: 19px;
+    -webkit-filter: invert(0.5);
+    filter: invert(0.5);
+    top: -6px;
+  }
+}
+
+
+.icon-tournaments {
+  &:before {
+    content: ' ';
+    display: block;
+    background-image: url('../../icons/tournaments.png');
+    background-size: 33px 34px;
+    height: 35px;
+    width: 33px;
+    position: relative;
+    right: 0px;
+    -webkit-filter: invert(0.5);
+    filter: invert(0.5);
+    top: -2px;
+  }
+}
+
+
+
+.icon-leaderboard {
+  &:before {
+    content: ' ';
+    display: block;
+    background-image: url('../../icons/leaderboards.svg');
+    background-size: 41px 35px;
+    height: 35px;
+    width: 41px;
+    position: relative;
+    right: 4px;
+    -webkit-filter: invert(0.5);
+    filter: invert(0.5);
+    top: -2px;
+  }
+}
+
+
+.icon-chat-room{
+  &:before {
+    content: ' ';
+    display: block;
+    background-image: url('../../icons/chat-rooms.svg');
+    background-size: 50px 40px;
+    height: 40px;
+    width: 50px;
+    position: relative;
+    right: 4px;
+    -webkit-filter: invert(0.5);
+    filter: invert(0.5);
+  }
+}

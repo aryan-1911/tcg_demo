@@ -1,0 +1,266 @@
+@import 'global.scss';
+
+.game-card {
+  &__box {
+    background: $gray-card-color;
+    padding: 22px 15px 30px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__info {
+    padding-right: 15px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: $white;
+    padding-bottom: 6px;
+    letter-spacing: -1px;
+    position: relative;
+  }
+
+  &__label {
+    background: $red;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 9px 8px;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-left: 5px;
+
+    &.won {
+      background: $red;
+    }
+
+    &.lost {
+      background: $dark;
+    }
+
+    &.dispute {
+      background: $alert-red;
+    }
+  }
+  @include b(550) {
+    &__name {
+      font-size: 20px;
+    }
+  }
+  @include b(460) {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info {
+      padding: 0 0 15px;
+    }
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+      .game-card-author {
+        padding-bottom: 15px;
+      }
+    }
+    &__name {
+      justify-content: center;
+    }
+    .game-card-types {
+      justify-content: center;
+    }
+  }
+}
+
+.game-card-types {
+  display: flex;
+
+  &__text {
+    display: block;
+    color: $gray-text-color;
+    font-size: 16px;
+    &:after {
+      @include before-img(4px, 4px);
+      border-radius: 50%;
+      background: $red;
+      position: static;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.game-card-prize {
+  &__price {
+    font-weight: 700;
+    &-ico {
+      // color: $red;
+      color:$dollarGreen;
+      font-size: 32px;
+      margin-right: 5px;
+    }
+    &-val {
+      color: $white;
+      font-size: 60px;
+    }
+  }
+  &__text {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $gray-text-color;
+    font-weight: 700;
+    text-align: right;
+  }
+  @include b(1600) {
+    &__price {
+      &-ico {
+        font-size: 26px;
+      }
+      &-val {
+        font-size: 42px;
+      }
+    }
+  }
+}
+
+.game-card-author {
+  display: flex;
+  cursor: pointer;
+
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-default {
+      width: 100%;
+      height: 100%;
+      background: $background-color;
+      display: block;
+    }
+  }
+
+  &__name {
+    display: block;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 2px;
+  }
+  &__time {
+    font-size: 12px;
+    font-weight: 700;
+    color: $gray-text-color;
+  }
+}
+
+.game-card-entry {
+  display: flex;
+  align-items: baseline;
+  &__text {
+    color: $gray-text-color;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  &__price {
+    font-weight: 700;
+    color: $white;
+    &-ico {
+      font-size: 12px;
+      color:$white;
+    }
+    &-val {
+      font-size: 18px;
+    }
+  }
+}
+
+.game-card-edit {
+  display: flex;
+  justify-content: space-between;
+  .btn {
+    padding: 0;
+    background: transparent;
+    color: $gray-text-color;
+    text-transform: none;
+    font-size: 14px;
+    font-weight: 400;
+    .material-icons.MuiIcon-root {
+      overflow: visible;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @include b(460) {
+    flex-direction: column-reverse;
+    &__buttons {
+      padding: 10px 0 15px;
+    }
+  }
+}
+
+.game-card--small {
+  .game-card {
+    &__name {
+      padding-bottom: 16px;
+    }
+  }
+  .game-card-prize {
+    &__box {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: baseline;
+      padding-bottom: 16px;
+    }
+    &__text {
+      font-size: 18px;
+      padding-right: 10px;
+    }
+    &__price {
+      &-val {
+        font-size: 24px;
+      }
+      &-ico {
+        font-size: 16px;
+      }
+    }
+  }
+  .game-card-entry {
+    &__text {
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import 'global.scss';
+
+.attach {
+  position: relative;
+
+  .input-error {
+    position: static;
+    margin-bottom: 5px;
+  }
+}
+
+.input-file {
+  display: block;
+  &__label {
+    color: $white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 18px;
+    display: table;
+    &-text {
+      span {
+        color: $gray-text-color;
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+  }
+  &__input {
+    display: none;
+  }
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+
+    .input-file-card {
+      margin: 5px 5px 0;
+    }
+
+    & + .input-error {
+      margin-top: 10px;
+    }
+  }
+}
+
+.input-file-card {
+  background: $white;
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+
+  &__name {
+    color: $background-color;
+    font-size: 12px;
+    font-weight: 700;
+    max-width: 176px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__close {
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    margin-left: 10px;
+    border: 0;
+    outline: none;
+    span {
+      color: $gray-text-color;
+      font-size: 10px;
+    }
+  }
+}

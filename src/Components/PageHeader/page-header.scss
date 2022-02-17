@@ -1,0 +1,25 @@
+@import 'global.scss';
+.page-header {
+  display: block;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    color: $white;
+    font-size: 32px;
+    font-weight: 700;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @include b(mobile) {
+    flex-direction: column;
+    padding-bottom: 30px;
+    &__btns {
+      margin-top: 20px;
+    }
+  }
+}

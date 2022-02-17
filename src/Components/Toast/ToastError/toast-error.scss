@@ -1,0 +1,33 @@
+@import 'global.scss';
+
+.toast-error-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+
+  .icon-warning-alert {
+    color: $red;
+    font-size: 80px;
+  }
+
+  .btn-wrapper {
+    display: table;
+  }
+}
+
+.toast-error {
+  &__title {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__subtitle {
+    display: block;
+    margin: 0 0 30px;
+    font-size: 22px;
+    text-align: center;
+  }
+}

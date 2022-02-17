@@ -1,0 +1,387 @@
+@import 'global.scss';
+
+.registration-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.registration-page {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding-bottom: 30px;
+
+    @media screen and (max-width: 630px) {
+      text-align: center;
+    }
+
+    .title {
+      color: $white;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      color: $white;
+      font-size: 18px;
+      font-weight: 400;
+      padding-top: 10px;
+    }
+  }
+
+  &-form {
+    .btn {
+      max-width: 200px;
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.terms-and-condtions-block {
+  font-size: 12px;
+
+  .conditions-link {
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.auth-page {
+  position: relative;
+  z-index: 2;
+
+  .user-profile-form-section {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    @include b(tablet) {
+      flex-wrap: wrap;
+    }
+
+    .btn-wrapper {
+      margin-top: 27px;
+      display: flex;
+    }
+
+    .user-profile-form-header__form {
+      margin-left: 100px;
+    }
+
+    .user-profile-form-block {
+      flex: 1;
+
+      .form-element {
+        width: 100%;
+        margin: 0 0 30px;
+
+        &.mt-0 {
+          margin-top: 0;
+        }
+      }
+
+      .section-name {
+        margin-top: 10px;
+      }
+    }
+
+    &__name {
+      flex: 0 0 100%;
+      margin: 0 60px 30px 0;
+      display: flex;
+      align-items: center;
+
+      @include m(mobile) {
+        flex-basis: 220px;
+      }
+
+      .section-number {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        border: 2px solid $gray-text-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $gray-text-color;
+
+        &__valid {
+          background: $red;
+          border: 2px solid $red;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .icon-check_sign {
+          display: none;
+          color: $background-color;
+        }
+
+        &.completed {
+          background-color: $red;
+          border: none;
+
+          .icon-check_sign {
+            display: block;
+          }
+
+          .step {
+            display: none;
+          }
+        }
+      }
+    }
+    .section-name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  &-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 0;
+    z-index: 2;
+
+    &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+
+      .additional_text {
+        color: $gray-text-color;
+        margin-right: 20px;
+        white-space: nowrap;
+      }
+
+      .btn-wrapper {
+        max-width: 186px;
+        width: 100%;
+      }
+      @include b(mobile) {
+        .additional_text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--registration {
+    .auth-wrapper {
+      max-width: 800px;
+    }
+    .login-page {
+      &__title {
+        text-align: center;
+        width: auto;
+        .title,
+        .sub-title {
+          display: block;
+        }
+      }
+      .form-element {
+        margin: 30px auto;
+      }
+      &-form {
+        &__element {
+          margin: 0 auto 40px;
+          display: table;
+          width: 220px;
+        }
+      }
+      .terms-and-condtions-block {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.user-profile-form-section {
+  position: relative;
+}
+
+.user-profile-form-bottom {
+  @include m(mobile) {
+    margin-left: 280px;
+  }
+}
+
+.card {
+  height: 100%;
+}
+
+.login-page {
+  width: 100%;
+  position: relative;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding-bottom: 30px;
+
+    .title {
+      color: $white;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      color: $white;
+      font-size: 18px;
+      font-weight: 400;
+      padding-top: 10px;
+    }
+  }
+
+  &-link {
+    position: absolute;
+    bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+
+    .link {
+      cursor: pointer;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 120px;
+    padding-bottom: 93px;
+  }
+
+  .form-element {
+    @include m(mobile) {
+      max-width: 500px;
+    }
+  }
+
+  .reset-password-btn {
+    .btn {
+      max-width: 290px;
+    }
+  }
+
+  .btn {
+    max-width: 220px;
+  }
+}
+
+.form-element {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .add-info {
+    font-size: 14px;
+    color: $gray-text-color;
+    text-transform: none;
+    font-weight: normal;
+  }
+
+  .date-picker-box {
+    & + .add-info {
+      display: block;
+      margin-top: 9px;
+      font-size: 12px;
+    }
+  }
+}
+
+.mg-30 {
+  margin-left: 30px;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+}
+
+.email-confirmation-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .icon-email {
+    margin-bottom: 50px;
+    cursor: pointer;
+    font-size: 62px;
+    color: $red;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height:24px;
+
+    .white-text {
+      font-weight: 700;
+      margin-right: 5px;
+    }
+  }
+
+  .link {
+    display: block;
+    align-items: center;
+    margin-top: 30px;
+    color: $red;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.skip-link {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  margin-top: 40px;
+}

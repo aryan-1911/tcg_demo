@@ -1,0 +1,11 @@
+.header {
+  display: block;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    width: 200px;
+    margin-top: 10px;
+  }
+}

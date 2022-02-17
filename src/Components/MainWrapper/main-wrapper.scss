@@ -1,0 +1,205 @@
+@import 'global.scss';
+
+.main-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  position: relative;
+  width: calc(100% - #{$aside-width});
+  margin-left: $aside-width;
+  transition: margin 0.3s;
+
+  &__content {
+    display: block;
+    padding: calc(#{$header-height} + 20px) 60px 20px;
+    height: calc(100% - 110px);
+  }
+
+  @include b(mobile) {
+    &__content {
+      height: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.main-header-wrapper {
+  height: fit-content;
+  padding: 20px 60px;
+  position: fixed;
+  top: 0;
+  left: $aside-width;
+  right: 0;
+  height: $header-height;
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 11;
+
+  @include b(tablet) {
+    position: absolute;
+  }
+
+  @include b(mobile) {
+    justify-content: flex-end;
+    padding: 20px 25px;
+
+    .main-header-button {
+      display: none;
+    }
+  }
+
+  .nav-close & {
+    @include b(tablet) {
+      left: $mobile-aside-width;
+      position: fixed;
+    }
+  }
+
+  .main-header-user-info {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    .header-nav__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      .header-nav__item {
+        padding: 10px 15px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 400;
+          transition: all ease 0.3s;
+          &:hover {
+            color: #f36c48;
+          }
+          &.btn:hover {
+            color: #fff;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .header-user-info {
+    display: flex;
+    align-items: center;
+
+    &__name {
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+
+      span {
+        white-space: nowrap;
+        max-width: 100px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        @include b(500) {
+          font-size: 13px;
+        }
+
+        @include m(501) {
+          max-width: 150px;
+        }
+      }
+    }
+
+    &__open {
+      margin-left: 10px;
+    }
+
+    &__image {
+      .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: block;
+      }
+    }
+  }
+
+  .header-balance {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    @include m(501) {
+      margin-right: 44px;
+    }
+
+    .icon-dollar_sign {
+      color: $dollarGreen;
+    }
+  }
+
+  .balance-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.625em;
+
+    @include b(500) {
+      font-size: 13px;
+    }
+
+    .span-block {
+      display: flex;
+      align-items: center;
+    }
+
+    .amount {
+      display: block;
+      color: $white;
+      font-size: 1.125em;
+      font-weight: 700;
+
+      &-cents {
+        font-size: 0.75em;
+      }
+    }
+
+    .balance-text {
+      text-transform: uppercase;
+      color: $gray-text-color;
+      font-size: 0.875em;
+      font-weight: 700;
+    }
+  }
+}
+
+//Doesn't use in current version
+
+// .header-notification {
+//   margin-right: 44px;
+
+//   .icon-notification_bell {
+//     font-size: 32px;
+//     position: relative;
+
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       right: -1px;
+//       top: 25%;
+//       width: 10px;
+//       height: 10px;
+//       border-radius: 50%;
+//       background-color: $gray-text-color;
+//     }
+//   }
+
+//   &.active {
+//     .icon-notification_bell::after {
+//       background-color: $red;
+//     }
+//   }
+// }

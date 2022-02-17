@@ -1,0 +1,51 @@
+@import 'global.scss';
+
+.dispute-page {
+  display: block;
+}
+
+.dispute-form {
+  &__col {
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__line {
+    &--submit {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include b(500) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .text-area-box {
+    &__input {
+      min-height: 158px;
+    }
+  }
+
+  &__files {
+    @include m(501) {
+      margin-right: 15px;
+    }
+
+    @include b(500) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    flex: 1 0 auto;
+
+    @include b(500) {
+      width: 100%;
+    }
+  }
+}

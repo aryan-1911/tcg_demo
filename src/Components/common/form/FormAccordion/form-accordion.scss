@@ -1,0 +1,12 @@
+@import "global.scss";
+
+.MuiAccordion-root.Mui-expanded:last-child {
+  border: 1px solid $red;
+}
+
+.accordion {
+  &-link {
+    text-decoration: none;
+    color: $white;
+  }
+}

@@ -1,0 +1,50 @@
+@import 'global.scss';
+
+.input-box {
+  position: relative;
+
+  .MuiFormControl-root {
+    display: block;
+  }
+
+  .MuiFormLabel-root {
+    color: $red;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: static;
+    transform: none;
+    &.Mui-focused {
+      color: $red;
+    }
+  }
+
+  .MuiInputBase-root {
+    display: block;
+    outline: none;
+    border: 0;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  .MuiInputAdornment-root {
+    .MuiIcon-root {
+      transform: none;
+      color: $red;
+    }
+  }
+
+  .MuiInputAdornment-positionStart {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    & + .MuiInputBase-input {
+      padding-left: 45px;
+    }
+  }
+}

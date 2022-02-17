@@ -1,0 +1,13 @@
+@import 'global.scss';
+
+.count-down {
+  display: flex;
+  font-weight: 700;
+  color: $white;
+  font-size: 16px;
+  &__item {
+  }
+  &__separator {
+    margin: 0 3px;
+  }
+}

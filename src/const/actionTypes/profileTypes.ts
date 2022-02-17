@@ -1,0 +1,11 @@
+import { makeActionType } from 'helpers';
+
+// PROFILE
+export const FETCH_USER_INFO = makeActionType('FETCH_USER_INFO');
+export const GET_PROFILE_MATCHES = makeActionType('GET_PROFILE_MATCHES');
+export const UPDATE_PROFILE_BALANCE = 'UPDATE_PROFILE_BALANCE';
+export const UPDATE_ACTIVE_COMPETITION_ID = 'UPDATE_ACTIVE_COMPETITION_ID';
+export const APPLY_FOR_AFFILIATION = makeActionType('APPLY_FOR_AFFILIATION');
+export const ONLINE_OFFLINE_DATA = 'ONLINE_OFFLINE_DATA';
+
+

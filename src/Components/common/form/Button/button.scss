@@ -1,0 +1,68 @@
+@import 'global.scss';
+
+.btn {
+  padding: 15px 25px 14px;
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  &-hover {
+    &:hover {
+      transition: all 0.3s;
+      opacity: 0.8;
+    }
+  }
+  &-loading {
+    background: $red;
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 1;
+  }
+  .MuiIcon-root {
+    font-size: 13px;
+    font-weight: 400;
+    margin-right: 10px;
+  }
+  &[disabled] {
+    transition: all 0.3s;
+    background: rgba($white, 0.2);
+    cursor:not-allowed;
+  }
+  @include b(mobile) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.btn-red {
+  color: $white;
+  background: $red;
+}
+
+.btn-white {
+  border: 1px solid $white;
+  color: $white;
+}
+
+.btn-white-fill {
+  background: $white;
+  color: $background-color;
+}
+
+.material-icons {
+  &.MuiIcon-root {
+    width: auto;
+    height: auto;
+  }
+}

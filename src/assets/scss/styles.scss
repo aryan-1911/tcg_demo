@@ -1,0 +1,15 @@
+@import './base/variables.scss';
+@import './base/mixins&includes.scss';
+
+@import './fonts.scss';
+@import './base/icomoon-style';
+
+@import './layout.scss';
+@import './form.scss';
+@import './general';
+@import './aside';
+@import './adaptive-aside.scss';
+$slick-font-path: "~slick-carousel/slick/fonts/"; // To add
+$slick-loader-path: "~slick-carousel/slick/";
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../../node_modules/slick-carousel/slick/slick.scss';

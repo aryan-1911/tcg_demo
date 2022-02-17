@@ -1,0 +1,61 @@
+@import 'global.scss';
+
+.success-modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success-modal {
+  line-height: 1.4;
+
+  .universal-modal {
+    &__content {
+      padding-bottom: 0;
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    padding-bottom: 35px;
+  }
+
+  &__cont {
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  &__ico {
+    margin-bottom: 25px;
+    &.MuiIcon-root {
+      display: block;
+      font-size: 60px;
+      color: $green;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    color: $white;
+    text-transform: uppercase;
+    padding-bottom: 7px;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    margin: 0 25px 10px 0;
+    color: $white;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin: 5px -10px 0 -10px;
+    .btn-wrapper {
+      padding: 0 10px;
+      width: 210px;
+    }
+  }
+}

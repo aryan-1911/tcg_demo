@@ -1,0 +1,23 @@
+@import 'global.scss';
+
+.aside {
+  &-wrapper {
+    border-right: 1px solid $gray-light;
+    box-sizing: border-box;
+    width: 320px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    transition: all 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  &-list {
+    list-style: none;
+    padding: 10px 5px 10px 20px;
+  }
+}

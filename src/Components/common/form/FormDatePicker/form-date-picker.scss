@@ -1,0 +1,117 @@
+@import 'global.scss';
+
+// Without flag !important we cannot override default styles for material-ui picker
+
+.MuiFormLabel-root.Mui-error {
+  color: $red !important;
+}
+
+.MuiPickersBasePicker-container {
+  background-color: $gray-card-color;
+  border: none;
+}
+.MuiPopover-paper {
+  border: 1px solid $gray-card-color !important;
+}
+.MuiPickersCalendarHeader-iconButton {
+  background-color: $red !important;
+}
+.MuiPickersDay-daySelected {
+  background-color: $red !important;
+  color: $white !important;
+}
+.MuiPickersDay-day {
+  color: $white !important;
+}
+.MuiPickersCalendarHeader-dayLabel {
+  color: $white !important;
+}
+
+.MuiDialog-root {
+  .MuiPaper-root {
+    border: none !important;
+  }
+}
+
+.MuiPickersToolbar-toolbar {
+  background-color: $gray-card-color !important;
+}
+
+.MuiDialogActions-root {
+  background-color: $gray-card-color;
+  button {
+    color: $white;
+  }
+}
+
+.MuiTypography-colorPrimary {
+  color: $red !important;
+}
+
+.MuiPickersToolbarText-toolbarTxt {
+  color: $white !important;
+}
+
+.MuiPickersYear-root {
+  &:focus {
+    color: $white !important;
+  }
+}
+
+.MuiPickersMonth-root {
+  &:focus {
+    color: $white !important;
+  }
+}
+
+.date-picker-box {
+  position: relative;
+
+  .MuiFormHelperText-root.Mui-error {
+    display: none;
+  }
+
+  .MuiFormControl-root {
+    display: block;
+  }
+
+  .MuiFormLabel-root {
+    @extend %input-label;
+    position: static;
+    transform: none;
+    &.Mui-focused {
+      color: $red;
+    }
+  }
+
+  .MuiInputBase-input {
+    @extend %input;
+    height: 46px;
+    font-size: 13px;
+  }
+
+  .MuiInputBase-root {
+    display: flex;
+    border: 1px solid $white;
+    color: $white;
+    font-size: 14px;
+    border-radius: 12px;
+    width: 100%;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  .MuiSvgIcon-root {
+    fill: $white;
+  }
+
+  .icon-calendar {
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}

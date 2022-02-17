@@ -1,0 +1,71 @@
+@import 'global.scss';
+
+.match-detail-modal {
+  line-height: 1.4;
+  .universal-modal {
+    &__header {
+      display: none;
+      &-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    }
+    &__content {
+      position: relative;
+      padding: 0;
+    }
+  }
+  &__header {
+    border-bottom: 4px solid $background-color;
+    padding: 30px 20px 25px;
+  }
+  &__content {
+    padding: 10px 20px 20px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 16px;
+    color: $gray-text-color;
+    padding-bottom: 5px;
+  }
+
+  &__ingame {
+    &-name {
+      display: block;
+      font-size: 14px;
+      color: $white;
+      font-weight: 700;
+    }
+  }
+  &__rule {
+    &-text {
+      display: block;
+      font-size: 13px;
+      color: $white;
+      font-weight: 700;
+      white-space: pre-wrap;
+    }
+  }
+  &__accept {
+    margin: 20px 0 0 auto;
+  }
+
+  .game-card-edit__buttons {
+    display: flex;
+
+    .btn-wrapper {
+      margin: 0 5px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+body {
+  font: 400 16px $font;
+  min-width: 360px;
+  background: $background-color;
+  color: $white;
+}
+
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include b(1300) {
+    max-width: none;
+  }
+}
+
+.card-form {
+  @extend %mobile-content;
+  background: $gray-card-color;
+  padding: 25px 15px;
+
+  @include m(mobile) {
+    padding: 40px 20px;
+  }
+
+  @include m(1367) {
+    &.columns {
+      display: flex;
+    }
+  }
+
+  @include m(1501) {
+    padding: 60px 0;
+  }
+
+  &__col {
+    margin: 0;
+
+    @include m(400) {
+      margin: 0 15px;
+    }
+
+    @include m(mobile) {
+      margin: 0 30px;
+    }
+
+    @include b(1366) {
+      &:first-child {
+        padding-bottom: 30px;
+      }
+    }
+
+    @include m(1367) {
+      .columns & {
+        width: 50%;
+        max-width: 620px;
+      }
+    }
+
+    @include m(1501) {
+      margin: 0 60px;
+    }
+  }
+
+  .btn-wrapper {
+    max-width: 186px;
+    width: 100%;
+    margin-left: auto;
+  }
+}
+
+.tooltip {
+  &.MuiIconButton-root {
+    color: $red;
+    padding: 8px;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.MuiTooltip-popper {
+  .MuiTooltip-tooltip {
+    font-size: 12px;
+  }
+}
+
+.avatar-empty {
+  background: $gray-text-color;
+}
+
+.ReactVirtualized__Grid {
+  @extend %scroll-wrap;
+  outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($gray-text-color, 0.8);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $gray-text-color;
+}
+
+.MuiMenuItem-root {
+  &.disable-animation {
+    & > .MuiTouchRipple-root {
+      display: none;
+    }
+  }
+}

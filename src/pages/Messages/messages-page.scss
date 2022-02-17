@@ -1,0 +1,9 @@
+@import 'global.scss';
+
+.messages-page {
+  display: block;
+
+  &__box {
+    @extend %mobile-content;
+  }
+}

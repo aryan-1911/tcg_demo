@@ -1,0 +1,53 @@
+@import 'global.scss';
+
+.match-started-modal {
+  display: block;
+
+  &__text {
+    display: block;
+    color: $white;
+    font-size: 16px;
+    line-height: 1.4;
+    padding-bottom: 30px;
+    span {
+      color: $red;
+      font-weight: 700;
+    }
+  }
+  &__id {
+    text-transform: uppercase;
+    color: $gray-text-color;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    padding-bottom: 30px;
+    span {
+      margin-left: 10px;
+      color: $white;
+      text-transform: none;
+    }
+  }
+  &__opponent {
+    @extend .match-started-modal__id;
+    text-transform: none;
+    padding: 0 0 30px;
+  }
+
+  &__bottom {
+    &-title {
+      font-weight: 700;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .count-down {
+    color: $red;
+    display: table;
+    margin: 20px auto 0;
+  }
+}
